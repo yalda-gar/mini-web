@@ -2,88 +2,13 @@
 <html>
     <head>
         <title>mini web shop</title>
+        <link rel="stylesheet" href="style.css">
        
     </head>
     <body> 
-        <style> 
-            body { 
-                font-family: Arial, sans-serif ;
-                background: #f9f9f9;
-            margin: 0;
-            }
+        
+}
 
-            header {
-            background: #ff6347;
-            padding: 20px;
-            color: white;
-            text-align: center;
-            font-size: 28px;
-        }
-
-        .container {
-            width: 90%;
-            margin: 30px auto;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .product {
-            background: white;
-            width: 220px;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: 0.2s;
-        }
-
-        .product:hover {
-            transform: scale(1.05);
-        }
-
-            .product img {
-            width: 100%;
-            height: 150px;
-            border-radius: 10px;
-            object-fit: cover;
-            }
-
-             button {
-            background: #ff6347;
-            color: white;
-            border: none;
-            padding: 10px;
-            width: 100%;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background: #e5533d;
-        }
-
-        #cart {
-            background: white;
-            width: 90%;
-            margin: 30px auto;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        }
-
-        #cart h2 {
-            margin-top: 0;
-        }
-
-        #cartItems li {
-            margin-bottom: 5px;
-        }
-
-
-        </style>
 
 
         <header>
@@ -96,14 +21,34 @@
                 <img src="download.jpg" alt="chips">
                 <h3>potato chips</h3>
                 <p>3$</p>
-                <button onclick="add to card('potato chips',3)">add to card</button>
+                <a href="cart.html?product=potato chips">
+    <button>Add to cart</button>
+</a>
+                
             </div>
+        
+
+            
+
             <div class="product">
-                <img src ="download-1.jpg" alt="cola">
+                <div id="cola"></div>
                 <h3>cola</h3>
-                <p>2$</p>
-                <button onclick="add to card('cola',2)">add to card</button>"
+                <p>3$</p>
+                <button onclick="addtocard('potato chips',3)">add to card</button>
             </div>
+
+            <div class="product">
+                <img src ="images.jpg" alt="chochalat">
+                <h3>chochalat</h3>
+                <p>5$</p>
+                <button onclick="addtocard('chochalat')">add to card </button>
+            </div>
+
+
+            
+        
+
+
 
 
             

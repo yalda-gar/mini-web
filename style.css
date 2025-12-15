@@ -1,0 +1,91 @@
+ body { 
+                font-family: Arial, sans-serif ;
+                background: #f9f9f9;
+            margin: 0;
+            }
+
+            header {
+            background: #ff6347;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .container {
+            width: 90%;
+            margin: 30px auto;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product {
+            background: white;
+            width: 240px;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+            .product img {
+            
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+            }
+
+             button {
+            background: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #e5533d;
+        }
+
+        #cart {
+            background: white;
+            width: 90%;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        #cart h2 {
+            margin-top: 0;
+        }
+
+        #cartItems li {
+            margin-bottom: 5px;
+        }
+
+#cola{
+    background-image: url(download-1.jpg);
+    width: 150x;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+#chochalat{
+    background-image: url(images.jpg);
+    width: 150px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
