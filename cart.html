@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <tittle>cart</tittle>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>your cart</h1>
-        <p>An item was added to your cart. </p>
-        <a href="miniweb.html">back to shop </a>
-    </body>
+<head>
+    <title>Your Cart</title>
+</head>
+<body>
+
+<h1>Your Cart</h1>
+
+<div id="cart"></div>
+<p id="total"></p>
+
+<button onclick="clearCart()">Clear Cart</button>
+<br><br>
+<a href="index.html">Back to shop</a>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cartDiv = document.getElementById("cart");
+let totalDiv = document.getElementById("total");
+
+function displayCart() {
+    cartDiv.innerHTML = "";
+    let total = 0;
+
+    if (cart.length === 0) {
+        cartDiv.innerHTML = "<p>Your cart is empty</p>";
+        totalDiv.innerHTML = "";
+        return;
+    }
+
+    cart.forEach((item, index) => {
+        total += item.price * item.quantity;
+
+        cartDiv.innerHTML += `
+            <div>
+                <img src="${item.image}" width="50">
+                <p>
+                    ${item.name} - $${item.price} × ${item.quantity}
+                </p>
+                <button onclick="removeItem(${index})">Remove</button>
+            </div>
+            <hr>
+        `;
+    });
+
+    totalDiv.innerHTML = "<strong>Total: $" + total + "</strong>";
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart();
+}
+
+function clearCart() {
+    localStorage.removeItem("cart");
+    cart = [];
+    displayCart();
+}
+
+displayCart();
+</script>
+
+</body>
 </html>
+
+
+

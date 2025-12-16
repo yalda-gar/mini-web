@@ -1,69 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>mini web shop</title>
-        <link rel="stylesheet" href="style.css">
-       
-    </head>
-    <body> 
-        
-}
+<head>
+    <title>Mini Web Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+    Snack Shop
+</header>
 
+<div class="container">
 
-        <header>
-            snack shop
-        </header>
+    <div class="product">
+        <img src="download.jpg" alt="chips">
+        <h3>Potato Chips</h3>
+        <p>$3</p>
+        <button onclick="addToCart('Potato Chips', 3)">Add to cart</button>
+    </div>
 
-        <div class="container">
+    <div class="product">
+        <img src="download-1.jpg" alt="cola">
+        <h3>Cola</h3>
+        <p>$3</p>
+        <button onclick="addToCart('Cola', 3)">Add to cart</button>
+    </div>
 
-            <div class="product">
-                <img src="download.jpg" alt="chips">
-                <h3>potato chips</h3>
-                <p>3$</p>
-                <a href="cart.html?product=potato chips">
-    <button>Add to cart</button>
-</a>
-                
-            </div>
-        
+    <div class="product">
+        <img src="images.jpg" alt="chocolate">
+        <h3>Chocolate</h3>
+        <p>$5</p>
+        <button onclick="addToCart('Chocolate', 5)">Add to cart</button>
+    </div>
 
-            
+    <div class="product">
+        <img src="4.jpg" alt="oreo">
+        <h3>Oreo</h3>
+        <p>$10</p>
+        <button onclick="addToCart('Oreo', 10)">Add to cart</button>
+    </div>
 
-            <div class="product">
-                <div id="cola"></div>
-                <h3>cola</h3>
-                <p>3$</p>
-                <button onclick="addtocard('potato chips',3)">add to card</button>
-            </div>
+    <div class="product">
+        <img src="5.jpg" alt="corn">
+        <h3>Corn</h3>
+        <p>$4</p>
+        <button onclick="addToCart('Corn', 4)">Add to cart</button>
+    </div>
 
-            <div class="product">
-                <img src ="images.jpg" alt="chochalat">
-                <h3>chochalat</h3>
-                <p>5$</p>
-                <button onclick="addtocard('chochalat')">add to card </button>
-            </div>
+    <div class="product">
+        <img src="6.jpg" alt="water">
+        <h3>Water</h3>
+        <p>$1</p>
+        <button onclick="addToCart('Water', 1)">Add to cart</button>
+    </div>
 
+</div>
 
-            
-        
-
-
-
-
-            
-
-
-        
-    </body>
-    
-
-
-        
-
-
-
-
-
-    
+<script src="script.js"></script>
+</body>
 </html>
