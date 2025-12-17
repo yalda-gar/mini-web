@@ -1,20 +1,19 @@
 function addToCart(name, price, image) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // check if item already exists
-    let existingItem = cart.find(item => item.name === name);
+let item = cart.find(p => p.name === name);
 
-    if (existingItem) {
-        existingItem.quantity += 1;
+    if (item) {
+        item.quantity += 1;
     } else {
         cart.push({
             name: name,
             price: price,
-            image: image,
-            quantity: 1
+            quantity: 1,
+            image: image
         });
     }
-
+    
     localStorage.setItem("cart", JSON.stringify(cart));
-    alert(name + " added to cart!");
+    location.href = "cart.html";
 }
