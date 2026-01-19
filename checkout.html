@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkout</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Checkout</h1>
+
+        <h3>order total</h3>
+    <p id="checkout-total">Loading...</p>
+    <h3>Your Details</h3>
+    <form id="checkout-form">
+        <input type="text" placeholder="Your Name" required><br><br>
+    <input type="email" placeholder="Your Email" required><br><br>
+    <textarea placeholder="Your Address" required></textarea><br><br>
+
+    <button type="submit">Place Order</button>
+    <br>
+<a href="cart.html">Back to Cart</a>
+
+<script>
+    // Get total saved from cart page
+    let total = localStorage.getItem("cartTotal");
+    if (total) {
+        document.getElementById("checkout-total").innerText = "Total: $" + total;
+    } else {
+        document.getElementById("checkout-total").innerText = "Your cart is empty";
+    }
+
+    document.getElementById("checkout-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Order placed successfully!");
+        localStorage.clear();
+        window.location.href = "miniweb.html";
+    });
+</script>
+</form>
+    
+    </body>
+</html>
