@@ -88,4 +88,5 @@ document.getElementById("total").innerText =
         function renderCart() {
             window.location.reload();
         }
+        
 
